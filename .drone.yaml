@@ -1,1 +1,10 @@
-pipeline:
+kind: pipeline
+name: default
+#1
+steps:
+- name: docker:
+  image: docker
+  commands:
+  - echo $${DOCKER_USERNAME
+  - echo $${DOCKER_PASSWORD}
+  secrets: [ docker_username, docker_password ]
